@@ -1,0 +1,40 @@
+<div>
+<h1 mat-dialog-title >Add Game Form</h1>
+
+<div mat-dialog-content><br>
+  <form [formGroup] = "GameForm">
+        <!--******************************-->
+        <mat-form-field appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input formControlName="gameName" matInput placeholder="Le nom du nouveau compte">
+            <mat-icon matSuffix>games</mat-icon>
+          </mat-form-field>      
+        <!--******************************-->     
+          <mat-form-field appearance="outline">
+            <mat-label>Année de production</mat-label>
+            <input type="number" formControlName="yearOfProd" matInput placeholder="Le nom du nouveau compte">
+            <mat-icon matSuffix>year</mat-icon>
+          </mat-form-field>   
+        <!--******************************-->  
+          <mat-form-field appearance="outline">
+            <mat-label>Synopsis</mat-label>
+            <input formControlName="story" matInput placeholder="Le nom du nouveau compte">
+            <mat-icon matSuffix>games</mat-icon>
+          </mat-form-field>         
+        <!--******************************-->      
+          <mat-form-field appearance="outline">
+            <mat-label>Genre</mat-label>
+            <input formControlName="genre" matInput placeholder="Le nom du nouveau compte">
+            <mat-icon matSuffix>genre</mat-icon>
+          </mat-form-field>                           
+          
+   </form>     
+
+
+  
+</div>
+<div mat-dialog-actions [align]="'end'">
+   <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+   <button mat-raised-button color="primary" (click)="addGame()">{{actionBtn}}</button>
+ </div>
+</div>
